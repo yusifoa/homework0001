@@ -1,0 +1,45 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Task - 1
+            //IsPrime metodu -parametr olaraq ineteger value qebul edir
+            //.Gonderilims integer deyerin sade olub olmadigini qaytarir.Eded sadedirse true, deyilse false qayitmalidir
+
+            Console.WriteLine("Eded daxil edin ; ");
+            string numstr = Console.ReadLine();
+            int num = int.Parse(numstr);
+            IsPrime(num);
+
+        }
+
+
+        static void IsPrime(int a)
+        {
+
+            if (a == 1)
+            {
+                Console.WriteLine("ne sade nede murekkebdir");
+            }
+            for (int i = 2; i < a; i++)
+            {
+                if (a % i == 0)
+                {
+                    Console.WriteLine("False");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("True");
+                    break;
+
+                }
+            }
+
+        }
+    }
+}
